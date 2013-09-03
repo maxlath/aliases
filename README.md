@@ -38,5 +38,5 @@ http://www.tldp.org/LDP/abs/html/refcards.html
 
 Help for Git & Github
 ------
-If some want to use this repo for pedagogic purpose to, you are very welcome!
+If some want to use this repo for pedagogic purpose too, you are very welcome!
 Here is a great tutorial http://rogerdudler.github.io/git-guide/
