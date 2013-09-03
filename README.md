@@ -4,7 +4,7 @@ aliases
 debian/ubuntu aliases of my own
 
 
-I put all those there with different purpose in mind:
+I put all those there with different purposes in mind:
 - ease the exchange with my linux wonderful world co-explorators (Grüßen Nitneuk & Stefen)
 - get eventual tips, feedbacks and improvements suggestions
 - get my hand on git & github (see 'Help for Git & Github' hereafter)
