@@ -1,40 +1,47 @@
-alias shn="sudo shutdown -h now"
-alias srn="sudo shutdown -r now"
-alias killchrome="killall chromium-browse"
-alias killfire="killall firefox"
-alias killfox="killall firefox"
-alias gk="gksudo gedit"
-alias txt="gedit"
+#APT (my favorite aliases eeever)
+alias agi="sudo apt-get install -y"
+alias agud="sudo apt-get update -y"
+alias agug="sudo apt-get upgrade -y"
+#####DOOOMSDAY MACHINE#####
+alias agu="echo UPDATE && sudo apt-get update -y && echo UPGRADE && sudo apt-get upgrade -y && echo AUTOREMOVE && sudo apt-get autoremove"
+#####DOOOMSDAY MACHINE#####
+alias agar="sudo apt-get autoremove"
+alias agadd="echo sudo add-apt-repository && sudo add-apt-repository"
+
+alias shn="sudo shutdown -h now" #turn off the PC now (requires password so not so efficient)
+alias srn="sudo shutdown -r now" #reboot PC now (same pb with pw and can't turn off acpi on my buggy machine)
+
+#kill processes
+alias killchrome="killall chromium-browse" #kill chrome processes
+alias killfire="killall firefox" #kill firefox processes
+alias killfox="killall firefox" #idem
+
+#app shortkey
+alias gk="gksudo gedit" #edit a text file as root
+alias txt="gedit" 
 alias g="gedit"
 alias s="subl"
 alias ff="firefox"
-alias red="redshift -l 45.702073:3.955733"
 alias n="nautilus"
+
+alias red="redshift -l 45.702073:3.955733" #turn the screen more red depending of the hour of the day (avoiding eye fatigue)
 alias sleep="sudo pm-suspend --quirk-s3-bios" #http://manpages.ubuntu.com/manpages/hardy/man8/pm-action.8.html
-alias c="clear"
+alias c="clear" #clear the screen
 
 #GRUB
 alias edgrub="gk /etc/default/grub"
 alias edgrubs="sudo s /etc/default/grub"
 alias regrub="sudo update-grub"
 
-#APT
-alias agi="sudo apt-get install -y"
-alias agud="sudo apt-get update -y"
-alias agug="sudo apt-get upgrade -y"
-alias agu="echo UPDATE && sudo apt-get update -y && echo UPGRADE && sudo apt-get upgrade -y && echo AUTOREMOVE && sudo apt-get autoremove"
-alias agar="sudo apt-get autoremove"
-alias agadd="echo sudo add-apt-repository && sudo add-apt-repository"
-
-#NETHOGS
+#NETHOGS (per process bandwidth meter)
 alias netwlan="sudo nethogs wlan0"
 alias netusb="sudo nethogs usb0"
 alias neteth="sudo nethogs eth0"
 
-#HISTORY
-alias hig="history | grep"
+#HISTORY 
+alias hig="history | grep" #look for the argument in the shell history (an other one of my favorite)
 
-#PC SCREEN
-alias pc="bash ~/.screenlayout/PC.sh"
-alias tv="bash ~/.screenlayout/TV.sh"
-alias pctv="bash ~/.screenlayout/both.sh"
+#PC SCREEN (utilities for switching to one screen or an other)
+alias pc="xrandr --output LVDS --mode 1280x800 --pos 0x0 --rotate normal --output CRT1 --off --output DFP1 --off" #yes you can guess the size of my screen
+alias tv="xrandr --output LVDS --off --output CRT1 --mode 1360x768 --pos 0x0 --rotate normal --output DFP1 --off"
+alias pctv="xrandr --output LVDS --mode 1280x800 --pos 0x0 --rotate normal --output CRT1 --mode 1360x768 --pos 0x0 --rotate normal --output DFP1 --off"

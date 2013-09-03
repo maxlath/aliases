@@ -1,17 +1,22 @@
+#I love to use aliases to reach a given directory. Far to much private information here but just to let you get the idea
 alias youtube="cd /home/maxlath/DL/youtube/ && ls"
 alias youtuben="nautilus /home/maxlath/DL/youtube/"
+
 alias mp3="cd /home/maxlath/DL/mp3/ && ls"
 alias mp3n="nautilus /home/maxlath/DL/mp3/"
+
 alias dl="cd /home/maxlath/DL/ && ls"
 alias dln="nautilus /home/maxlath/DL/"
+
 alias bidouille="cd /home/maxlath/Bidouille/ && ls"
-alias bubble="cd /home/maxlath/Bidouille/bubble/ && ls"
 alias bidouillen="nautilus /home/maxlath/Bidouille/"
+
 alias school="cd /home/maxlath/DL/Courses/CodeSchool/JS/ && ls"
 alias coffeescript="cd /home/maxlath/DL/Courses/CodeSchool/JS/4\ -\ CoffeeScript/ && ls"
 alias backbone="cd /home/maxlath/DL/Courses/CodeSchool/JS/3\ -\ Backbone.js/ && ls"
 alias nodeschool="cd /home/maxlath/DL/Courses/CodeSchool/JS/5\ -\ Node.js/ && ls"
 alias schooln="nautilus /home/maxlath/DL/Courses/CodeSchool/JS/"
+
 alias htc="cd /home/maxlath/HTCsync/ && ls"
 alias images="cd /home/maxlath/Images/ && ls"
 alias htcimg="cd /home/maxlath/Images/HTC_Cam/ && ls"
