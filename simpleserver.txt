@@ -1,11 +1,18 @@
-#BIDOUILLE LOCAL & APP ENGINE
-alias locgin="cd ~/Bidouille/ && google_appengine/dev_appserver.py udacity/maxlathunchained/"
-alias upgin="cd ~/Bidouille/ && google_appengine/appcfg.py update udacity/maxlathunchained/"
-alias locbid="cd ~/Bidouille/ && python -m SimpleHTTPServer"
-alias locgintest="cd ~/Bidouille/ && google_appengine/dev_appserver.py --port=9999 nk1nk3/ "
-alias upgintest="cd ~/Bidouille/ && google_appengine/appcfg.py update nk1nk3/ "
-alias locginyou="cd ~/Bidouille/ && google_appengine/dev_appserver.py --port=9090 youtify/ "
-alias upginyou="cd ~/Bidouille/ && google_appengine/appcfg.py update youtify/ "
-alias locginbook="cd ~/Bidouille/ && google_appengine/dev_appserver.py --port=7777 booksurfing/ "
-alias upginbook="cd ~/Bidouille/ && google_appengine/appcfg.py update booksurfing/ "
-alias locginblog="cd ~/Bidouille/ && google_appengine/dev_appserver.py --port=7778 booksurfing/cs253-blog/ "
+#one line simple server
+alias locbid="cd ~/Projet/ && python -m SimpleHTTPServer"
+
+
+#stuffs to push updates to appengine, very handy for Udacity courses
+alias locgin="cd ~/Projet/ && google_appengine/dev_appserver.py udacity/maxlathunchained/"
+alias upgin="cd ~/Projet/ && google_appengine/appcfg.py update udacity/maxlathunchained/"
+
+alias locgintest="cd ~/Projet/ && google_appengine/dev_appserver.py --port=9999 nk1nk3/ "
+alias upgintest="cd ~/Projet/ && google_appengine/appcfg.py update nk1nk3/ "
+
+alias locginyou="cd ~/Projet/ && google_appengine/dev_appserver.py --port=9090 youtify/ "
+alias upginyou="cd ~/Projet/ && google_appengine/appcfg.py update youtify/ "
+
+alias locginbook="cd ~/Projet/ && google_appengine/dev_appserver.py --port=7777 booksurfing/ "
+alias upginbook="cd ~/Projet/ && google_appengine/appcfg.py update booksurfing/ "
+
+alias locginblog="cd ~/Projet/ && google_appengine/dev_appserver.py --port=7778 booksurfing/cs253-blog/ "

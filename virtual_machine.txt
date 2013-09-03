@@ -1,4 +1,5 @@
-#VM
+#start an existant virtual machine called wind7
 alias vmw7="virtualbox --startvm wind7"
-alias killvm="killall VirtualBox"
-alias killbox="killall VirtualBox"
+
+alias killvm="killall VirtualBox" #kill vm
+alias killbox="killall VirtualBox" #idem
