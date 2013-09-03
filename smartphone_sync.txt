@@ -1,0 +1,4 @@
+#SYNC
+alias htcphotosync="rsync -h --progress --stats -r -t --modify-window=1 -l -D --update /media/SD/DCIM/Camera/ ~/Images/HTC_Cam/"
+alias htcfilesync="rsync -h --progress --delete --stats -r -t --modify-window=1 -l -D --update /home/maxlath/HTCsync/ /media/SD/HTCSync/"
+alias htcsync="echo STARTING HTCPHOTOSYNC && htcphotosync && echo STARTING HTCFILESYNC && htcfilesync"

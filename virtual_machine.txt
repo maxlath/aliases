@@ -1,0 +1,4 @@
+#VM
+alias vmw7="virtualbox --startvm wind7"
+alias killvm="killall VirtualBox"
+alias killbox="killall VirtualBox"

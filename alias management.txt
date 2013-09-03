@@ -1,0 +1,19 @@
+alias edit-alias="gedit ~/.bash_aliases"
+alias edal="gedit ~/.bash_aliases file"
+alias edals="subl ~/.bash_aliases"
+alias edalsub="subl ~/.bash_aliases"
+alias edalv="vim ~/.bash_aliases"
+alias edav="vim ~/.bash_aliases"
+
+#NEEDS TO RELOAD ALIAS BY COMMAND reload-alias OR . ~/.bashrc
+alias reload-alias=". ~/.bashrc"
+alias real=". ~/.bashrc"
+
+alias catal="cat ~/.bash_aliases"
+alias catag="cat ~/.bash_aliases | grep"
+
+alias addlias=". ~/Bidouille/scripts/addlias.sh"
+# Requires the following script
+# #!/bin/bash
+# sed -i "\$a$@" ~/.bash_aliases;
+# echo "done"

@@ -1,0 +1,40 @@
+alias shn="sudo shutdown -h now"
+alias srn="sudo shutdown -r now"
+alias killchrome="killall chromium-browse"
+alias killfire="killall firefox"
+alias killfox="killall firefox"
+alias gk="gksudo gedit"
+alias txt="gedit"
+alias g="gedit"
+alias s="subl"
+alias ff="firefox"
+alias red="redshift -l 45.702073:3.955733"
+alias n="nautilus"
+alias sleep="sudo pm-suspend --quirk-s3-bios" #http://manpages.ubuntu.com/manpages/hardy/man8/pm-action.8.html
+alias c="clear"
+
+#GRUB
+alias edgrub="gk /etc/default/grub"
+alias edgrubs="sudo s /etc/default/grub"
+alias regrub="sudo update-grub"
+
+#APT
+alias agi="sudo apt-get install -y"
+alias agud="sudo apt-get update -y"
+alias agug="sudo apt-get upgrade -y"
+alias agu="echo UPDATE && sudo apt-get update -y && echo UPGRADE && sudo apt-get upgrade -y && echo AUTOREMOVE && sudo apt-get autoremove"
+alias agar="sudo apt-get autoremove"
+alias agadd="echo sudo add-apt-repository && sudo add-apt-repository"
+
+#NETHOGS
+alias netwlan="sudo nethogs wlan0"
+alias netusb="sudo nethogs usb0"
+alias neteth="sudo nethogs eth0"
+
+#HISTORY
+alias hig="history | grep"
+
+#PC SCREEN
+alias pc="bash ~/.screenlayout/PC.sh"
+alias tv="bash ~/.screenlayout/TV.sh"
+alias pctv="bash ~/.screenlayout/both.sh"

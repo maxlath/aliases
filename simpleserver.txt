@@ -1,0 +1,11 @@
+#BIDOUILLE LOCAL & APP ENGINE
+alias locgin="cd ~/Bidouille/ && google_appengine/dev_appserver.py udacity/maxlathunchained/"
+alias upgin="cd ~/Bidouille/ && google_appengine/appcfg.py update udacity/maxlathunchained/"
+alias locbid="cd ~/Bidouille/ && python -m SimpleHTTPServer"
+alias locgintest="cd ~/Bidouille/ && google_appengine/dev_appserver.py --port=9999 nk1nk3/ "
+alias upgintest="cd ~/Bidouille/ && google_appengine/appcfg.py update nk1nk3/ "
+alias locginyou="cd ~/Bidouille/ && google_appengine/dev_appserver.py --port=9090 youtify/ "
+alias upginyou="cd ~/Bidouille/ && google_appengine/appcfg.py update youtify/ "
+alias locginbook="cd ~/Bidouille/ && google_appengine/dev_appserver.py --port=7777 booksurfing/ "
+alias upginbook="cd ~/Bidouille/ && google_appengine/appcfg.py update booksurfing/ "
+alias locginblog="cd ~/Bidouille/ && google_appengine/dev_appserver.py --port=7778 booksurfing/cs253-blog/ "
