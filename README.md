@@ -42,7 +42,7 @@ How To
 - As for the Easy version, you need to reload the aliases with the command . ~/.bashrc (reload aliases globally: ~/.bash_aliases is just for your session)
 	
 ######NB: Problems with Github MarkDown
-I could find a way to nicely 
+I could find a way to nicely escape bash commentaries '#' which Github MarkDown turned into hearders, I thus replaced them with backslash (cf genalreadme). Beware not to copy commentaries without changing back from '\' to '#' !
 
 ######Manipulate Aliases
 see 'Alias management'
@@ -97,8 +97,6 @@ Table of Contents
 [VirtualMachine](https://github.com/maxlath/aliases#VirtualMachine)
 
 [Web utilities](https://github.com/maxlath/aliases#Web-utilities)
-
-[zedisdead](https://github.com/maxlath/aliases#zedisdead)
 
 
 
@@ -532,10 +530,4 @@ alias verdana="loadbodyfontverdana"
 \command examples
 \jQuery('body, div, p, blockquote, li, pre').css({'font-family': 'verdana', 'font-weight': ''});
 \jQuery('body, div, p, blockquote, li, pre').css({'font-family': 'helvetica', 'font-weight': ''});
-
-
-
-
-zedisdead
-===============================
 
