@@ -1,0 +1,9 @@
+# Those are my favorite ones :D
+alias agi="sudo apt-get install -y"
+alias agud="sudo apt-get update -y"
+alias agug="sudo apt-get upgrade -y"
+#####DOOOMSDAY MACHINE#####
+alias agu="echo UPDATE && sudo apt-get update -y && echo UPGRADE && sudo apt-get upgrade -y && echo AUTOREMOVE && sudo apt-get autoremove"
+#####DOOOMSDAY MACHINE#####
+alias agar="sudo apt-get autoremove"
+alias agadd="echo sudo add-apt-repository && sudo add-apt-repository"

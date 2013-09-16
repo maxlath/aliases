@@ -1,0 +1,10 @@
+#Synchronization utilities between my smartphone (/media/SD/) and my computer
+
+alias htcphotosync="rsync -h --progress --stats -r -t --modify-window=1 -l -D --update /media/SD/DCIM/Camera/ ~/Images/HTC_Cam/"
+#backup the photos on my computer
+
+alias htcfilesync="rsync -h --progress --delete --stats -r -t --modify-window=1 -l -D --update /home/maxlath/HTCsync/ /media/SD/HTCSync/"
+#transfer the file on my computer to my smartphone (containing Music, Travel documents, Videos  subfolders and stuffs)
+
+alias htcsync="echo STARTING HTCPHOTOSYNC && htcphotosync && echo STARTING HTCFILESYNC && htcfilesync"
+#lauch both does previous sync and tell proudly about it
