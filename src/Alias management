@@ -47,7 +47,8 @@ function genalreadme(){
   cd $aldir/src/;
   echo -e 'Generatign the Table of Content in Github Markdown'
   for filename in !($excluding); do
-    echo -e "\n[#$filename][$filename]---------------------\n"
+    name=${filename// /-} #replace blank space with -
+    echo -e "\n[https://github.com/maxlath/aliases#$name][$filename]"
   done > ToC;
   echo -e 'Generatign the aliases'
   for filename in !($excluding); do

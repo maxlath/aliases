@@ -20,8 +20,9 @@ Easy version
 - save
 - reload the aliases with the command . ~/.bashrc (reload aliases globally: ~/.bash_aliases is just for your session)
 
-Junky version (generate the ~/.bash_aliases file from multiple text files)
+Junky version
 -------------------------
+ (generate the ~/.bash_aliases file from multiple text files)
 - create a folder dedicated to your aliases
 - create there a text file 'loc-dir' to define the path you will use as variable
 	-> set 'aldir' (for alias-directory) to the path of the alias folder you just created: aldir=~/MyAliases
@@ -68,53 +69,37 @@ Here is a great tutorial http://rogerdudler.github.io/git-guide/
 
 Table of Contents
 =================
-[#Alias management][Alias management]---------------------
+[https://github.com/maxlath/aliases#Alias-management][Alias management]
 
+[https://github.com/maxlath/aliases#Apps-and-processes][Apps and processes]
 
-[#Apps and processes][Apps and processes]---------------------
+[https://github.com/maxlath/aliases#APT-GET-DOOMSDAY-MACHINE][APT-GET-DOOMSDAY-MACHINE]
 
+[https://github.com/maxlath/aliases#Bittorrent-Sync][Bittorrent Sync]
 
-[#APT-GET-DOOMSDAY-MACHINE][APT-GET-DOOMSDAY-MACHINE]---------------------
+[https://github.com/maxlath/aliases#Clipboard][Clipboard]
 
+[https://github.com/maxlath/aliases#Directories-navigation][Directories navigation]
 
-[#Bittorrent Sync][Bittorrent Sync]---------------------
+[https://github.com/maxlath/aliases#Git][Git]
 
+[https://github.com/maxlath/aliases#Other-utilities][Other utilities]
 
-[#Clipboard][Clipboard]---------------------
+[https://github.com/maxlath/aliases#PulseAudio][PulseAudio]
 
+[https://github.com/maxlath/aliases#Screens][Screens]
 
-[#Directories navigation][Directories navigation]---------------------
+[https://github.com/maxlath/aliases#Shell][Shell]
 
+[https://github.com/maxlath/aliases#Simple-server][Simple server]
 
-[#Git][Git]---------------------
+[https://github.com/maxlath/aliases#Smartphone-sync-tools][Smartphone sync tools]
 
+[https://github.com/maxlath/aliases#System][System]
 
-[#Other utilities][Other utilities]---------------------
+[https://github.com/maxlath/aliases#VirtualMachine][VirtualMachine]
 
-
-[#PulseAudio][PulseAudio]---------------------
-
-
-[#Screens][Screens]---------------------
-
-
-[#Shell][Shell]---------------------
-
-
-[#Simple server][Simple server]---------------------
-
-
-[#Smartphone sync tools][Smartphone sync tools]---------------------
-
-
-[#System][System]---------------------
-
-
-[#VirtualMachine][VirtualMachine]---------------------
-
-
-[#Web utilities][Web utilities]---------------------
-
+[https://github.com/maxlath/aliases#Web-utilities][Web utilities]
 
 
 
@@ -170,7 +155,8 @@ function genalreadme(){
   cd $aldir/src/;
   echo -e 'Generatign the Table of Content in Github Markdown'
   for filename in !($excluding); do
-    echo -e "\n[#$filename][$filename]---------------------\n"
+    name=${filename// /-} #replace blank space with -
+    echo -e "\n[https://github.com/maxlath/aliases#$name][$filename]"
   done > ToC;
   echo -e 'Generatign the aliases'
   for filename in !($excluding); do
