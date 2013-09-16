@@ -1,3 +1,0 @@
-alias btsyncconfig="sudo dpkg-reconfigure btsync"
-alias btsync="sudo /etc/init.d/btsync start && echo btsync start && firefox http://localhost:4444/gui/"
-alias btstop="sudo /etc/init.d/btsync stop && echo btsync stop"

@@ -1,5 +1,0 @@
-#EOG
-alias img="echo eog for Eye of GNOME && eog"
-
-#PING
-alias pig="echo Trying to ping google.fr && ping google.fr"
