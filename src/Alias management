@@ -56,7 +56,7 @@ function genalreadme(){
     echo -e "\n\n\n$filename\n===============================\n"
     cat "$filename"
   done > cat_src;
-  cat cat_src|tr "#" "\\\\#"  > cat_src_escaped
+  tr "#" "\\*" < cat_src > cat_src_escaped
   cat 'readme' 'ToC' 'cat_src_escaped' > $aldir/README.md
   echo -e '\e[0;32mREADME.md re-generated!!\e[0m'
 }

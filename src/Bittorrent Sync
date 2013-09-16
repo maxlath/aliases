@@ -5,7 +5,6 @@ alias btstop="sudo /etc/init.d/btsync stop && echo btsync stop"
 
 #VOLE cf project at http://vole.cc
 alias newvole="cd ~/Vole/users/ && mkdir" #create file for a new user
-#alias vole="sudo /etc/init.d/btsync start && echo btsync start && . $loc/vole/Makefile && echo Makefile && firefox http://localhost:6789/"
 alias vole="sudo /etc/init.d/btsync start && echo btsync start &&
             echo http://localhost:6789/ &&
             cd $loc/vole/ &&
