@@ -10,7 +10,7 @@ alias pavu="echo pacmd list-sinks \| grep index && pacmd list-sinks | grep index
 
 #changing the output sink for a given app
 alias ms="pactl move-sink-input"
-# [Help] pactl move-sink-input [ID] [sink] ALIAS ms [ID] [sink]
+#[Help] pactl move-sink-input [ID] [sink] ALIAS ms [ID] [sink]
 #source: http://unix.stackexchange.com/questions/65246/change-pulseaudio-input-output-from-shell
 
 

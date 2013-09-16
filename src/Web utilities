@@ -12,7 +12,7 @@ alias helvetica="loadbodyfonthelvetica"
 alias loadbodyfontverdana="grep 'verdana' $loc/scripts/editweb.js | cb"
 alias verdana="loadbodyfontverdana"
 
-# command examples
-# jQuery('body, div, p, blockquote, li, pre').css({'font-family': 'verdana', 'font-weight': ''});
-# jQuery('body, div, p, blockquote, li, pre').css({'font-family': 'helvetica', 'font-weight': ''});
+#command examples
+#jQuery('body, div, p, blockquote, li, pre').css({'font-family': 'verdana', 'font-weight': ''});
+#jQuery('body, div, p, blockquote, li, pre').css({'font-family': 'helvetica', 'font-weight': ''});
 

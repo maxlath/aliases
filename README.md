@@ -13,15 +13,13 @@ I put all those here with different purposes in mind:
 How To
 ==========
 
-Easy version
------------------------
+####Easy version
 - find the aliases that fit your need in the text files (sorted by thematic)
 - open the file ~/.bash_aliases for edition and paste the alias (create one if none)
 - save
 - reload the aliases with the command . ~/.bashrc (reload aliases globally: ~/.bash_aliases is just for your session)
 
-Junky version
--------------------------
+####Junky version
  (generate the ~/.bash_aliases file from multiple text files)
 - create a folder dedicated to your aliases
 - create there a text file 'loc-dir' to define the path you will use as variable
@@ -43,8 +41,7 @@ Junky version
 	}```
 - As for the Easy version, you need to reload the aliases with the command . ~/.bashrc (reload aliases globally: ~/.bash_aliases is just for your session)
 	
-Manipulate Aliases
--------
+######Manipulate Aliases
 see 'Alias management'
 functionalities includes:
 - edit the aliases file ('edal')
@@ -53,53 +50,50 @@ functionalities includes:
 - add an alias to aliases from command line ('addal')
 - search in existing aliases ('catag')
 
-Installation required
--------
+######Installation required
 - Some commands require to install packages (nethogs, xrandr...): time to fire your 'agi'!
 
-Help for bash syntax
-------
+######Help for bash syntax
 http://www.tldp.org/LDP/abs/html/refcards.html
 
-Help for Git & Github
-------
+######Help for Git & Github
 If some want to use this repo for pedagogic purpose too, you are very welcome!
 Here is a great tutorial http://rogerdudler.github.io/git-guide/
 
 
 Table of Contents
 =================
-[https://github.com/maxlath/aliases#Alias-management][Alias management]
+[Alias management](https://github.com/maxlath/aliases#Alias-management)
 
-[https://github.com/maxlath/aliases#Apps-and-processes][Apps and processes]
+[Apps and processes](https://github.com/maxlath/aliases#Apps-and-processes)
 
-[https://github.com/maxlath/aliases#APT-GET-DOOMSDAY-MACHINE][APT-GET-DOOMSDAY-MACHINE]
+[APT-GET-DOOMSDAY-MACHINE](https://github.com/maxlath/aliases#APT-GET-DOOMSDAY-MACHINE)
 
-[https://github.com/maxlath/aliases#Bittorrent-Sync][Bittorrent Sync]
+[Bittorrent Sync](https://github.com/maxlath/aliases#Bittorrent-Sync)
 
-[https://github.com/maxlath/aliases#Clipboard][Clipboard]
+[Clipboard](https://github.com/maxlath/aliases#Clipboard)
 
-[https://github.com/maxlath/aliases#Directories-navigation][Directories navigation]
+[Directories navigation](https://github.com/maxlath/aliases#Directories-navigation)
 
-[https://github.com/maxlath/aliases#Git][Git]
+[Git](https://github.com/maxlath/aliases#Git)
 
-[https://github.com/maxlath/aliases#Other-utilities][Other utilities]
+[Other utilities](https://github.com/maxlath/aliases#Other-utilities)
 
-[https://github.com/maxlath/aliases#PulseAudio][PulseAudio]
+[PulseAudio](https://github.com/maxlath/aliases#PulseAudio)
 
-[https://github.com/maxlath/aliases#Screens][Screens]
+[Screens](https://github.com/maxlath/aliases#Screens)
 
-[https://github.com/maxlath/aliases#Shell][Shell]
+[Shell](https://github.com/maxlath/aliases#Shell)
 
-[https://github.com/maxlath/aliases#Simple-server][Simple server]
+[Simple server](https://github.com/maxlath/aliases#Simple-server)
 
-[https://github.com/maxlath/aliases#Smartphone-sync-tools][Smartphone sync tools]
+[Smartphone sync tools](https://github.com/maxlath/aliases#Smartphone-sync-tools)
 
-[https://github.com/maxlath/aliases#System][System]
+[System](https://github.com/maxlath/aliases#System)
 
-[https://github.com/maxlath/aliases#VirtualMachine][VirtualMachine]
+[VirtualMachine](https://github.com/maxlath/aliases#VirtualMachine)
 
-[https://github.com/maxlath/aliases#Web-utilities][Web utilities]
+[Web utilities](https://github.com/maxlath/aliases#Web-utilities)
 
 
 
@@ -108,15 +102,15 @@ Alias management
 
 #aliases to edit aliases
 
-# with gedit
+#with gedit
 alias edit-alias="gedit ~/.bash_aliases"
 alias edal="gedit ~/.bash_aliases file"
 
-# with sublime-text 3
+#with sublime-text 3
 alias edals="subl ~/.bash_aliases"
 alias edalsub="subl ~/.bash_aliases"
 
-# with vim
+#with vim
 alias edalv="vim ~/.bash_aliases"
 alias edav="vim ~/.bash_aliases"
 
@@ -156,7 +150,8 @@ function genalreadme(){
   echo -e 'Generatign the Table of Content in Github Markdown'
   for filename in !($excluding); do
     name=${filename// /-} #replace blank space with -
-    echo -e "\n[https://github.com/maxlath/aliases#$name][$filename]"
+    echo -e "\n[$filename](https://github.com/maxlath/aliases#$name)"
+    #[This link](http://example.net/) has no title attribute.
   done > ToC;
   echo -e 'Generatign the aliases'
   for filename in !($excluding); do
@@ -197,7 +192,7 @@ alias n="nautilus"
 APT-GET-DOOMSDAY-MACHINE
 ===============================
 
-# Those are my favorite ones :D
+#Those are my favorite ones :D
 alias agi="sudo apt-get install -y"
 alias agud="sudo apt-get update -y"
 alias agug="sudo apt-get upgrade -y"
@@ -232,54 +227,53 @@ alias vole="sudo /etc/init.d/btsync start && echo btsync start &&
 Clipboard
 ===============================
 
-
 alias xclipp='xclip -sel clip <' 
 #copy the content of the file in argument but less nice than the following I found later on the web.
 
 
-# source: http://madebynathan.com/2011/10/04/a-nicer-way-to-use-xclip/
-# A shortcut function that simplifies usage of xclip.
-# - Accepts input from either stdin (pipe), or params.
-# ------------------------------------------------
+#source: http://madebynathan.com/2011/10/04/a-nicer-way-to-use-xclip/
+#A shortcut function that simplifies usage of xclip.
+#- Accepts input from either stdin (pipe), or params.
+#------------------------------------------------
 cb() {
   local _scs_col="\e[0;32m"; local _wrn_col='\e[1;31m'; local _trn_col='\e[0;33m'
-  # Check that xclip is installed.
+  #Check that xclip is installed.
   if ! type xclip > /dev/null 2>&1; then
     echo -e "$_wrn_col""You must have the 'xclip' program installed.\e[0m"
-  # Check user is not root (root doesn't have access to user xorg server)
+  #Check user is not root (root doesn't have access to user xorg server)
   elif [[ "$USER" == "root" ]]; then
     echo -e "$_wrn_col""Must be regular user (not root) to copy a file to the clipboard.\e[0m"
   else
-    # If no tty, data should be available on stdin
+    #If no tty, data should be available on stdin
     if ! [[ "$( tty )" == /dev/* ]]; then
       input="$(< /dev/stdin)"
-    # Else, fetch input from params
+    #Else, fetch input from params
     else
       input="$*"
     fi
-    if [ -z "$input" ]; then  # If no input, print usage message.
+    if [ -z "$input" ]; then  #If no input, print usage message.
       echo "Copies a string to the clipboard."
       echo "Usage: cb <string>"
       echo "       echo <string> | cb"
     else
-      # Copy input to clipboard
+      #Copy input to clipboard
       echo -n "$input" | xclip -selection c
-      # Truncate text for status
+      #Truncate text for status
       if [ ${#input} -gt 80 ]; then input="$(echo $input | cut -c1-80)$_trn_col...\e[0m"; fi
-      # Print status.
+      #Print status.
       echo -e "$_scs_col""Copied to clipboard:\e[0m $input"
     fi
   fi
 }
-# Aliases / functions leveraging the cb() function
-# ------------------------------------------------
-# Copy contents of a file
+#Aliases / functions leveraging the cb() function
+#------------------------------------------------
+#Copy contents of a file
 function cbf() { cat "$1" | cb; }  
-# Copy SSH public key
+#Copy SSH public key
 alias cbssh="cbf ~/.ssh/id_rsa.pub"  
-# Copy current working directory
+#Copy current working directory
 alias cbwd="pwd | cb"  
-# Copy most recent command in bash history
+#Copy most recent command in bash history
 alias cbhs="cat $HISTFILE | tail -n 1 | cb"
 
 #*******************
@@ -399,7 +393,7 @@ alias pavu="echo pacmd list-sinks \| grep index && pacmd list-sinks | grep index
 
 #changing the output sink for a given app
 alias ms="pactl move-sink-input"
-# [Help] pactl move-sink-input [ID] [sink] ALIAS ms [ID] [sink]
+#[Help] pactl move-sink-input [ID] [sink] ALIAS ms [ID] [sink]
 #source: http://unix.stackexchange.com/questions/65246/change-pulseaudio-input-output-from-shell
 
 
@@ -528,7 +522,7 @@ alias helvetica="loadbodyfonthelvetica"
 alias loadbodyfontverdana="grep 'verdana' $loc/scripts/editweb.js | cb"
 alias verdana="loadbodyfontverdana"
 
-# command examples
-# jQuery('body, div, p, blockquote, li, pre').css({'font-family': 'verdana', 'font-weight': ''});
-# jQuery('body, div, p, blockquote, li, pre').css({'font-family': 'helvetica', 'font-weight': ''});
+#command examples
+#jQuery('body, div, p, blockquote, li, pre').css({'font-family': 'verdana', 'font-weight': ''});
+#jQuery('body, div, p, blockquote, li, pre').css({'font-family': 'helvetica', 'font-weight': ''});
 

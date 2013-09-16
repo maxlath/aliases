@@ -1,14 +1,14 @@
 #aliases to edit aliases
 
-# with gedit
+#with gedit
 alias edit-alias="gedit ~/.bash_aliases"
 alias edal="gedit ~/.bash_aliases file"
 
-# with sublime-text 3
+#with sublime-text 3
 alias edals="subl ~/.bash_aliases"
 alias edalsub="subl ~/.bash_aliases"
 
-# with vim
+#with vim
 alias edalv="vim ~/.bash_aliases"
 alias edav="vim ~/.bash_aliases"
 
@@ -48,7 +48,8 @@ function genalreadme(){
   echo -e 'Generatign the Table of Content in Github Markdown'
   for filename in !($excluding); do
     name=${filename// /-} #replace blank space with -
-    echo -e "\n[https://github.com/maxlath/aliases#$name][$filename]"
+    echo -e "\n[$filename](https://github.com/maxlath/aliases#$name)"
+    #[This link](http://example.net/) has no title attribute.
   done > ToC;
   echo -e 'Generatign the aliases'
   for filename in !($excluding); do
