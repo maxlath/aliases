@@ -1,1 +1,2 @@
+alias gca="git commit -a" #commit the formerly added files
 alias gpom="git push origin master"
