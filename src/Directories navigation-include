@@ -1,0 +1,57 @@
+#CD
+alias cdp="cd ../"
+alias cdpp="cd ../ && cd ../"
+#cd ~ = cd
+
+#LS UTILITIES
+alias lss="ls --size -h"
+alias lssa="ls --size -ha"
+alias lsss="ls --size -h -S"
+alias lsssa="ls --size -ha -S"
+
+
+#create a folder and 'cd' in it
+function mkcd() {
+  mkdir -p "$1" && cd "$1";
+}
+#source: https://github.com/RepublicOfCoders/Aliases/blob/master/alias.txt
+
+
+#I love to use aliases to reach a given directory.
+#Far to much private information here but just to let you get the idea
+alias aliases="real && cd $aldir/src && ls"
+
+alias scripts='cd $loc/scripts && ls'
+alias scriptcd='scripts'
+
+alias youtube="cd ~/DL/youtube/ && ls"
+alias youtuben="nautilus ~/DL/youtube/"
+
+alias mp3="cd ~/DL/mp3/ && ls"
+alias mp3n="nautilus ~/DL/mp3/"
+
+alias dl="cd ~/DL/ && ls"
+alias dln="nautilus ~/DL/"
+
+alias bidouille="cd ~/Bidouille/ && ls"
+alias bidouillen="nautilus ~/Bidouille/"
+
+alias school="cd ~/DL/9\ Courses/JS/ && ls"
+alias coffeescript="cd ~/DL/9\ Courses/JS/4\ -\ CoffeeScript/ && ls"
+alias backbone="cd ~/DL/9\ Courses/JS/3\ -\ Backbone.js/ && ls"
+alias nodeschool="cd ~/DL/9\ Courses/JS/5\ -\ Node.js/ && ls"
+alias schooln="nautilus ~/DL/9\ Courses/JS/"
+
+alias htc="cd ~/HTCsync/ && ls"
+alias images="cd ~/Images/ && ls"
+alias htcimg="cd ~/Images/HTC_Cam/ && ls"
+alias voyages='cd ~/HTCsync/Voyages/ && ls'
+
+#mounting windows C:/ disk => edit the sda2 to your configuration
+alias createCbeforeMount="sudo mkdir /media/maxlath/C"
+alias mountc="sudo mount /dev/sda2 /media/maxlath/C && max2"
+alias mc="mountc"
+alias umountc="cd && sudo umount /media/maxlath/C && echo '/media/maxlath/C umounted'"
+alias umc="umountc"
+
+alias backupsync="csync /media/maxlath/C/Users/Max2/Dropbox/BackUped /home/maxlath/Documents/BackUped"

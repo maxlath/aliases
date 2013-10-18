@@ -1,0 +1,21 @@
+alias shn="sudo shutdown -h now" #turn off the PC now & quickly (requires password so a bit tedious though)
+alias srn="sudo shutdown -r now" #reboot PC now (same pb with pw and can't turn off acpi on my buggy machine)
+alias sh="sudo shutdown -h" #to be completed by an day time with the 24 hour notation: i.e. 20:00 for 8 pm
+alias sleep="sudo pm-suspend --quirk-s3-bios" #http://manpages.ubuntu.com/manpages/hardy/man8/pm-action.8.html
+
+#GRUB
+alias edgrub="gk /etc/default/grub"
+alias edgrubs="sudo s /etc/default/grub"
+alias regrub="sudo update-grub"
+
+#NETHOGS (per process bandwidth meter)
+alias netwlan="sudo nethogs wlan0"
+alias netusb="sudo nethogs usb0"
+alias neteth="sudo nethogs eth0"
+
+#PING
+alias pig="echo Trying to ping google.fr && ping google.fr"
+
+#PATH MANAGEMENT
+alias path="gk ~/.profile"
+alias repath=". ~/.profile"

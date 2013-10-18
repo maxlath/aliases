@@ -1,0 +1,6 @@
+alias gca="git commit -a" #commit the formerly added files
+alias gpom="git push origin master"
+
+
+
+alias grsh="git reset --soft HEAD^" #undoing a commit cf CS Git lvl 2

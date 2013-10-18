@@ -1,0 +1,7 @@
+alias fsyncroot="sudo rsync -h --progress --stats -r -t --modify-window=1 -l -D --update --exclude-from $aldir/src/backup-exclude-list / /media/maxlath/MaxPass/Backup\ F/Root"
+alias fsynchome="sudo rsync -h --progress --stats -r -t --modify-window=1 -l -D --update --exclude-from $aldir/src/fsynchome-exclude-list /home/maxlath/ /media/maxlath/MaxPass/Backup\ F/Home"
+alias fsynczik="sudo rsync -h --progress --stats -r -t --modify-window=1 -l -D --update --exclude-from $aldir/src/fsynczik-exclude-list /home/Musique/ /media/maxlath/MaxPassport/5\ Music"
+alias fsyncdl="sudo rsync -h --progress --stats -r -t --modify-window=1 -l -D --update /home/maxlath/DL/ /media/maxlath/MaxPassport/DL\ Actuel/"
+
+alias iomegabackhome="sudo rsync -h --progress --stats -r -t --modify-window=1 -l -D --update --exclude-from $aldir/src/fsynchome-exclude-list /home/maxlath/ /media/maxlath/Iomega\ hdd\ Max/iomegabackhome/"
+alias iomegabackzik="sudo rsync -h --progress --stats -r -t --modify-window=1 -l -D --update --exclude-from $aldir/src/fsynczik-exclude-list /home/Musique/ /media/maxlath/Iomega\ hdd\ Max/iomegabackzik/"
