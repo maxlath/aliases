@@ -66,21 +66,21 @@ Here is a great tutorial http://rogerdudler.github.io/git-guide/
 
 Table of Contents
 =================
-[Alias management-include](https://github.com/maxlath/aliases/blob/master/src/Alias-management-include)
+[Alias management-include](https://github.com/maxlath/aliases/blob/master/src/Alias%20management-include)
 
-[Apps and processes-include](https://github.com/maxlath/aliases/blob/master/src/Apps-and-processes-include)
+[Apps and processes-include](https://github.com/maxlath/aliases/blob/master/src/Apps%20and%20processes-include)
 
 [APT-GET-DOOMSDAY-MACHINE-include](https://github.com/maxlath/aliases/blob/master/src/APT-GET-DOOMSDAY-MACHINE-include)
 
-[Bittorrent Sync-include](https://github.com/maxlath/aliases/blob/master/src/Bittorrent-Sync-include)
+[Bittorrent Sync-include](https://github.com/maxlath/aliases/blob/master/src/Bittorrent%20Sync-include)
 
 [Clipboard-include](https://github.com/maxlath/aliases/blob/master/src/Clipboard-include)
 
-[Directories navigation-include](https://github.com/maxlath/aliases/blob/master/src/Directories-navigation-include)
+[Directories navigation-include](https://github.com/maxlath/aliases/blob/master/src/Directories%20navigation-include)
 
 [Git-include](https://github.com/maxlath/aliases/blob/master/src/Git-include)
 
-[Other utilities-include](https://github.com/maxlath/aliases/blob/master/src/Other-utilities-include)
+[Other utilities-include](https://github.com/maxlath/aliases/blob/master/src/Other%20utilities-include)
 
 [PulseAudio-include](https://github.com/maxlath/aliases/blob/master/src/PulseAudio-include)
 
@@ -88,12 +88,12 @@ Table of Contents
 
 [Shell-include](https://github.com/maxlath/aliases/blob/master/src/Shell-include)
 
-[Simple server-include](https://github.com/maxlath/aliases/blob/master/src/Simple-server-include)
+[Simple server-include](https://github.com/maxlath/aliases/blob/master/src/Simple%20server-include)
 
-[Smartphone sync tools-include](https://github.com/maxlath/aliases/blob/master/src/Smartphone-sync-tools-include)
+[Smartphone sync tools-include](https://github.com/maxlath/aliases/blob/master/src/Smartphone%20sync%20tools-include)
 
 [System-include](https://github.com/maxlath/aliases/blob/master/src/System-include)
 
 [VirtualMachine-include](https://github.com/maxlath/aliases/blob/master/src/VirtualMachine-include)
 
-[Web utilities-include](https://github.com/maxlath/aliases/blob/master/src/Web-utilities-include)
+[Web utilities-include](https://github.com/maxlath/aliases/blob/master/src/Web%20utilities-include)

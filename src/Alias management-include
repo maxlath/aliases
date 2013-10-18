@@ -53,7 +53,7 @@ function genalreadme(){
   cd $aldir/src/;
   echo -e 'Generating the Table of Content in Github Markdown'
   for filename in *-include; do
-    name=${filename// /-} #replace blank space with -
+    name=${filename// /%20} #replace blank space with %20 pour escape les espaces
     echo -e "\n[$filename](https://github.com/maxlath/aliases/blob/master/src/$name)"
     #[This link](http://example.net/) has no title attribute.
   done > ToC;
