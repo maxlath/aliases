@@ -1,0 +1,7 @@
+#PCSCR
+alias pc="xrandr --output LVDS --mode 1280x800 --pos 0x0 --rotate normal --output CRT1 --off --output DFP1 --off"
+alias tv="xrandr --output LVDS --off --output CRT1 --mode 1360x768 --pos 0x0 --rotate normal --output DFP1 --off"
+alias pctv="xrandr --output LVDS --mode 1280x800 --pos 0x0 --rotate normal --output CRT1 --mode 1360x768 --pos 0x0 --rotate normal --output DFP1 --off"
+
+
+alias red="redshift -l 45.702073:3.955733" #turn the screen more red depending of the hour of the day (avoiding eye fatigue)

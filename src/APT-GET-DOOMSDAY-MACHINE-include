@@ -1,0 +1,40 @@
+#Those are my favorite ones :D
+alias agilogless="sudo apt-get install -y"
+alias agill="agilogless"
+function agi(){
+	echo 'new agi function'
+	agill $*;
+	echo $* >> ~/log/install;
+	echo $*' added to ~/log/install'
+}
+alias edloginstall="s ~/log/install"
+alias viewloginstall="cat ~/log/install"
+
+alias agud="sudo apt-get update -y"
+alias agug="sudo apt-get upgrade -y"
+#####DOOOMSDAY MACHINE#####
+alias agu="echo UPDATE && sudo apt-get update -y && echo UPGRADE && sudo apt-get upgrade -y && echo AUTOREMOVE && sudo apt-get autoremove"
+#####DOOOMSDAY MACHINE#####
+alias agarll="sudo apt-get autoremove"
+
+function agar(){
+	echo 'new agar function'
+	agarll $*;
+	echo $* >> ~/log/remove;
+	echo $*' added to ~/log/remove'
+}
+alias agarl="agar"
+
+alias agaddlogless="echo sudo add-apt-repository && sudo add-apt-repository"
+function agadd(){
+	agaddlogless $1;
+	echo $1 >> ~/log/ppa-install;
+	echo $1' added to ~/log/ppa-install'
+	if [ $2 ] ; then
+		echo 'source: '$2 >> ~/log/ppa-install-source;
+		echo $2' added to ~/log/ppa-install-source'
+	else
+		echo $1' -> source missing '>> ~/log/ppa-install-source;
+	fi
+}
+alias edppainstall="s ~/log/ppa-install"

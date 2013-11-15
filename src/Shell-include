@@ -1,0 +1,3 @@
+alias hig="history | grep" #look for the argument in the shell history (an other one of my favorite)
+alias c="clear" #clear the screen
+alias cc='c && cd'

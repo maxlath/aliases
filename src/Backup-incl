@@ -1,0 +1,3 @@
+alias fsyncroot="sudo rsync -h --progress --stats -r -t --modify-window=1 -l -D --update --exclude-from $aldir/src/backup-exclude-list / /media/MaxPass/Backup\ F/Root"
+alias fsynchome="sudo rsync -h --progress --stats -r -t --modify-window=1 -l -D --update --exclude-from $aldir/src/fsynchome-exclude-list /home/maxlath/ /media/MaxPass/Backup\ F/Home"
+alias fsynczik="sudo rsync -h --progress --stats -r -t --modify-window=1 -l -D --update --exclude-from $aldir/src/fsynczik-exclude-list /home/Musique/ /media/MaxPassport/5\ Music"

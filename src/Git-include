@@ -1,0 +1,6 @@
+alias gca="git commit -a" #commit the changes on formerly added files
+alias gpom="git push origin master"
+alias gco="git checkout"
+alias gcob="git checkout -b"
+alias gbv="git branch -v"
+alias glog="git log"

@@ -1,0 +1,76 @@
+#aliases to edit aliases
+
+#with gedit
+alias edit-alias="gedit ~/.aliases"
+alias edal="gedit ~/.aliases"
+
+#with sublime-text 3
+alias edals="subl ~/.aliases"
+alias edalsub="subl ~/.aliases"
+
+#with vim
+alias edalv="vim ~/.aliases"
+alias edav="vim ~/.aliases"
+
+#NEEDS TO RELOAD ALIAS BY COMMAND reload-alias OR . ~/.zshrc for the change to be taken in account
+alias reload-alias="source ~/.zshrc"
+alias real="reload-alias"
+alias sureal="genal && real"
+alias megreal="genal && real && genalreadme && cd $aldir"
+
+#have a look to the existing aliases
+alias catal="cat ~/.aliases"
+alias catag="cat ~/.aliases | grep"
+alias grepal="catag"
+
+#add a new alias <alias name, command> to the perso file (not directly shared on github, cf genalreadme())
+function addal(){
+  sed -i "\$a alias $1='$2'" ~/Bidouille/aliases/src/perso-incl; 
+  echo "edit alias done"
+}
+
+#Lets generate aliases from the different text sources!
+function genal(){
+  now=$(date +'%Y_%m_%d')
+  cp ~/.aliases ~/.aliases_old/aliases_$now
+  echo -e 'Starting to generate aliases\e[0m'
+  # excluding=$exclude_from_aliases_piped
+  # cd $aldir/src/;
+  for filename in ~/Bidouille/aliases/src/*-incl*; do
+    echo -e "\n\n\n#$filename\n#===============================\n"
+    cat "$filename"
+  done > ~/.aliases;
+  echo -e '\e[0;32maliases re-generated\e[0m'
+}
+
+
+# exclude_from_github="readme locdir perso cat_src cat_src_escaped old encryption ToC "
+# exclude_from_aliases="readme cat_src cat_src_escaped old ToC" --->
+
+
+#now let's prepare the README for Github to include a basic description and then directly the aliases while excluding personal aliases and setting of local directories trough variables $loc and $aldir (alias directories).
+#I also keep my encryption aliases offline as I wouldn't like to spread stuff that are probably bad practices
+function genalreadme(){
+  excluding=$exclude_from_github_piped
+  echo -e 'Generating the Table of Content in Github Markdown'
+  for filename in ~/Bidouille/aliases/src/*-include; do
+    name=${filename// /-} #replace blank space with -
+    echo -e "\n[$filename](https://github.com/maxlath/aliases#$name)"
+    #[This link](http://example.net/) has no title attribute.
+  done > ToC;
+  echo -e 'Generatign the aliases'
+  for filename in *-include; do
+    echo -e "\n\n\n$filename\n===============================\n"
+    cat "$filename"
+  done > cat_src;
+  tr "#" "\\*" < cat_src > cat_src_escaped
+  cat 'readme' 'ToC' 'cat_src_escaped' > ~/Bidouille/aliases/README.md
+  echo -e '\e[0;32mREADME.md re-generated!!\e[0m'
+}
+
+function genalgitignore(){
+  excluding=$exclude_from_github
+  for filename in $excluding; do
+    echo src/$filename
+  done > ~/Bidouille/aliases/.gitignore
+}
