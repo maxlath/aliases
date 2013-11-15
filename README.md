@@ -66,41 +66,41 @@ Here is a great tutorial http://rogerdudler.github.io/git-guide/
 
 Table of Contents
 =================
-[Alias management](https://github.com/maxlath/aliases#Alias-management)
+[Alias management-include](https://github.com/maxlath/aliases#Alias-management-include)
 
-[Apps and processes](https://github.com/maxlath/aliases#Apps-and-processes)
+[Apps and processes-include](https://github.com/maxlath/aliases#Apps-and-processes-include)
 
-[APT-GET-DOOMSDAY-MACHINE](https://github.com/maxlath/aliases#APT-GET-DOOMSDAY-MACHINE)
+[APT-GET-DOOMSDAY-MACHINE-include](https://github.com/maxlath/aliases#APT-GET-DOOMSDAY-MACHINE-include)
 
-[Bittorrent Sync](https://github.com/maxlath/aliases#Bittorrent-Sync)
+[Bittorrent Sync-include](https://github.com/maxlath/aliases#Bittorrent-Sync-include)
 
-[Clipboard](https://github.com/maxlath/aliases#Clipboard)
+[Clipboard-include](https://github.com/maxlath/aliases#Clipboard-include)
 
-[Directories navigation](https://github.com/maxlath/aliases#Directories-navigation)
+[Directories navigation-include](https://github.com/maxlath/aliases#Directories-navigation-include)
 
-[Git](https://github.com/maxlath/aliases#Git)
+[Git-include](https://github.com/maxlath/aliases#Git-include)
 
-[Other utilities](https://github.com/maxlath/aliases#Other-utilities)
+[Other utilities-include](https://github.com/maxlath/aliases#Other-utilities-include)
 
-[PulseAudio](https://github.com/maxlath/aliases#PulseAudio)
+[PulseAudio-include](https://github.com/maxlath/aliases#PulseAudio-include)
 
-[Screens](https://github.com/maxlath/aliases#Screens)
+[Screens-include](https://github.com/maxlath/aliases#Screens-include)
 
-[Shell](https://github.com/maxlath/aliases#Shell)
+[Shell-include](https://github.com/maxlath/aliases#Shell-include)
 
-[Simple server](https://github.com/maxlath/aliases#Simple-server)
+[Simple server-include](https://github.com/maxlath/aliases#Simple-server-include)
 
-[Smartphone sync tools](https://github.com/maxlath/aliases#Smartphone-sync-tools)
+[Smartphone sync tools-include](https://github.com/maxlath/aliases#Smartphone-sync-tools-include)
 
-[System](https://github.com/maxlath/aliases#System)
+[System-include](https://github.com/maxlath/aliases#System-include)
 
-[VirtualMachine](https://github.com/maxlath/aliases#VirtualMachine)
+[VirtualMachine-include](https://github.com/maxlath/aliases#VirtualMachine-include)
 
-[Web utilities](https://github.com/maxlath/aliases#Web-utilities)
+[Web utilities-include](https://github.com/maxlath/aliases#Web-utilities-include)
 
 
 
-Alias management
+Alias management-include
 ===============================
 
 *aliases to edit aliases
@@ -128,22 +128,29 @@ alias catal="cat ~/.bash_aliases"
 alias catag="cat ~/.bash_aliases | grep"
 
 *add a new alias <alias name, command> to the perso file (not directly shared on github, cf genalreadme())
-function addl(){
-  sed -i "\$a alias $1='$2'" $aldir/src/perso; 
+function addal(){
+  sed -i "\$a alias $1='$2'" $aldir/src/perso-incl; 
   echo "edit alias done"
 }
 
 *Lets generate aliases from the different text sources!
 function genal(){
+  now=$(date +'%Y_%m_%d')
+  cp ~/.bash_aliases ~/.bash_aliases_old/bash_aliases_$now
   echo -e 'Starting to generate aliases\e[0m'
-  excluding=$exclude_from_aliases_piped
+  * excluding=$exclude_from_aliases_piped
   cd $aldir/src/;
-  for filename in !($excluding); do
+  for filename in *-incl*; do
     echo -e "\n\n\n*$filename\n*===============================\n"
     cat "$filename"
   done > ~/.bash_aliases;
   echo -e '\e[0;32mbash_aliases re-generated\e[0m'
 }
+
+
+* exclude_from_github="readme locdir perso cat_src cat_src_escaped old encryption ToC "
+* exclude_from_aliases="readme cat_src cat_src_escaped old ToC" --->
+
 
 *now let's prepare the README for Github to include a basic description and then directly the aliases while excluding personal aliases and setting of local directories trough variables $loc and $aldir (alias directories).
 *I also keep my encryption aliases offline as I wouldn't like to spread stuff that are probably bad practices
@@ -151,13 +158,13 @@ function genalreadme(){
   excluding=$exclude_from_github_piped
   cd $aldir/src/;
   echo -e 'Generating the Table of Content in Github Markdown'
-  for filename in !($excluding); do
+  for filename in *-include; do
     name=${filename// /-} *replace blank space with -
     echo -e "\n[$filename](https://github.com/maxlath/aliases*$name)"
     *[This link](http://example.net/) has no title attribute.
   done > ToC;
   echo -e 'Generatign the aliases'
-  for filename in !($excluding); do
+  for filename in *-include; do
     echo -e "\n\n\n$filename\n===============================\n"
     cat "$filename"
   done > cat_src;
@@ -174,7 +181,7 @@ function genalgitignore(){
 }
 
 
-Apps and processes
+Apps and processes-include
 ===============================
 
 *kill processes
@@ -193,7 +200,7 @@ alias ff="firefox"
 alias n="nautilus"
 
 
-APT-GET-DOOMSDAY-MACHINE
+APT-GET-DOOMSDAY-MACHINE-include
 ===============================
 
 *Those are my favorite ones :D
@@ -207,7 +214,7 @@ alias agar="sudo apt-get autoremove"
 alias agadd="echo sudo add-apt-repository && sudo add-apt-repository"
 
 
-Bittorrent Sync
+Bittorrent Sync-include
 ===============================
 
 alias btsyncconfig="sudo dpkg-reconfigure btsync"
@@ -227,7 +234,7 @@ alias vole="sudo /etc/init.d/btsync start && echo btsync start &&
 *never perfectly worked, needed to reload the aliases for a reason I couldn't identify so far
 
 
-Clipboard
+Clipboard-include
 ===============================
 
 alias xclipp='xclip -sel clip <' 
@@ -284,7 +291,7 @@ alias cbhs="cat $HISTFILE | tail -n 1 | cb"
 alias cbhelp="echo -e '*****\ncbf = Copy contents of a file \ncbssh = Copy SSH public key \ncbhs = Copy most recent command in bash history \n*****'"
 
 
-Directories navigation
+Directories navigation-include
 ===============================
 
 *CD
@@ -308,7 +315,7 @@ function mkcd() {
 
 *I love to use aliases to reach a given directory.
 *Far to much private information here but just to let you get the idea
-alias aliases="cd $aldir && ls"
+alias aliases="cd $aldir/src && ls"
 
 alias scripts='cd $loc/scripts && ls'
 alias scriptcd='scripts'
@@ -325,11 +332,11 @@ alias dln="nautilus ~/DL/"
 alias bidouille="cd ~/Bidouille/ && ls"
 alias bidouillen="nautilus ~/Bidouille/"
 
-alias school="cd ~/DL/Courses/CodeSchool/JS/ && ls"
-alias coffeescript="cd ~/DL/Courses/CodeSchool/JS/4\ -\ CoffeeScript/ && ls"
-alias backbone="cd ~/DL/Courses/CodeSchool/JS/3\ -\ Backbone.js/ && ls"
-alias nodeschool="cd ~/DL/Courses/CodeSchool/JS/5\ -\ Node.js/ && ls"
-alias schooln="nautilus ~/DL/Courses/CodeSchool/JS/"
+alias school="cd ~/DL/9\ Courses/JS/ && ls"
+alias coffeescript="cd ~/DL/9\ Courses/JS/4\ -\ CoffeeScript/ && ls"
+alias backbone="cd ~/DL/9\ Courses/JS/3\ -\ Backbone.js/ && ls"
+alias nodeschool="cd ~/DL/9\ Courses/JS/5\ -\ Node.js/ && ls"
+alias schooln="nautilus ~/DL/9\ Courses/JS/"
 
 alias htc="cd ~/HTCsync/ && ls"
 alias images="cd ~/Images/ && ls"
@@ -337,14 +344,14 @@ alias htcimg="cd ~/Images/HTC_Cam/ && ls"
 alias voyages='cd ~/HTCsync/Voyages/ && ls'
 
 
-Git
+Git-include
 ===============================
 
 alias gca="git commit -a" *commit the formerly added files
 alias gpom="git push origin master"
 
 
-Other utilities
+Other utilities-include
 ===============================
 
 *EOG: open an image
@@ -382,7 +389,7 @@ extract () {
 *source: https://github.com/RepublicOfCoders/Aliases/blob/master/alias.txt
 
 
-PulseAudio
+PulseAudio-include
 ===============================
 
 *I got issues with PulseAudio while I try to use an USB sound card: PulseAudio gets lost between the possible outputs
@@ -411,7 +418,7 @@ alias sw4="pacmd set-default-sink 4 && pacmd list-sinks | grep index"
 alias sw5="pacmd set-default-sink 5 && pacmd list-sinks | grep index"
 
 
-Screens
+Screens-include
 ===============================
 
 *PCSCR
@@ -423,7 +430,7 @@ alias pctv="xrandr --output LVDS --mode 1280x800 --pos 0x0 --rotate normal --out
 alias red="redshift -l 45.702073:3.955733" *turn the screen more red depending of the hour of the day (avoiding eye fatigue)
 
 
-Shell
+Shell-include
 ===============================
 
 alias hig="history | grep" *look for the argument in the shell history (an other one of my favorite)
@@ -431,7 +438,7 @@ alias c="clear" *clear the screen
 alias cc='c && cd'
 
 
-Simple server
+Simple server-include
 ===============================
 
 *one line simple server
@@ -456,10 +463,15 @@ alias locginblog="cd ~/Projet/ && google_appengine/dev_appserver.py --port=7778 
 alias cmdgin="gedit $loc/cmdgin" *OUVRIR MEMO COMMAND APPENGINE
 
 
-Smartphone sync tools
+Smartphone sync tools-include
 ===============================
 
 *Synchronization utilities between my smartphone (/media/SD/) and my computer
+
+function htcarchive(){
+	mv ~/HTCsync/Video/Archive/* ~/DL/Archive/Video/
+	> ~/HTCsync/Video/Archive/empty
+}
 
 alias htcphotosync="rsync -h --progress --stats -r -t --modify-window=1 -l -D --update /media/SD/DCIM/Camera/ ~/Images/HTC_Cam/"
 *backup the photos on my computer
@@ -467,12 +479,12 @@ alias htcphotosync="rsync -h --progress --stats -r -t --modify-window=1 -l -D --
 alias htcfilesync="rsync -h --progress --delete --stats -r -t --modify-window=1 -l -D --update /home/maxlath/HTCsync/ /media/SD/HTCSync/"
 *transfer the file on my computer to my smartphone (containing Music, Travel documents, Videos  subfolders and stuffs)
 
-alias htcsync="echo STARTING HTCPHOTOSYNC && htcphotosync && echo STARTING HTCFILESYNC && htcfilesync"
+alias htcsync="echo STARTING ARCHIVING && htcarchive && echo STARTING HTCPHOTOSYNC && htcphotosync && echo STARTING HTCFILESYNC && htcfilesync"
 *lauch both does previous sync and tell proudly about it
 
 
 
-System
+System-include
 ===============================
 
 alias shn="sudo shutdown -h now" *turn off the PC now & quickly (requires password so a bit tedious though)
@@ -497,7 +509,7 @@ alias path="gk ~/.profile"
 alias repath=". ~/.profile"
 
 
-VirtualMachine
+VirtualMachine-include
 ===============================
 
 *start an existant virtual machine called wind7
@@ -509,7 +521,7 @@ alias killvm="killall VirtualBox" *kill vm
 alias killbox="killall VirtualBox" *idem
 
 
-Web utilities
+Web utilities-include
 ===============================
 
 *Open your brother's console to start to mess around!
